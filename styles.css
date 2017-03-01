@@ -95,25 +95,6 @@ header {
   border: 1px solid #eae9e9;
 }
 
-.profile-icon:hover {
-  background-image: url(images/white-user.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #15A3F9;
-}
-
-.profile,
-.profile:hover,
-.calendar,
-.calendar:hover,
-.grid,
-.grid:hover {
-  border-left: 1px solid #eef2f5;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .search-bar {
   display: flex;
   width: 86%;
@@ -141,7 +122,7 @@ h1 {
   font-weight: 400;
   color: #696a6c;
   margin-top: 0px;
-  padding: 18px 0 10px 31px;
+  padding: 40px 0 10px 31px;
 }
 
 .map-tag {
@@ -238,14 +219,19 @@ span {
 .charts-container {
   height: 25%;
   display: flex;
-  flex-direction: column;
   background-color: #edf2f6;
 }
 
+.charts-and-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .three-radial-charts {
-  position: relative;
-  top: 60px;
-  left: 30px;
   width: 450px;
   display: flex;
   justify-content: space-between;
@@ -274,10 +260,6 @@ span {
 }
 
 .totals {
-  position: relative;
-  top: 70px;
-  left: 160px;
-  height: 32px;
   width: 185px;
   border: 2px solid #a9b0ba;
   border-radius: 25px;
@@ -292,10 +274,12 @@ span {
 }
 
 .bar-graphs {
-  width: 265px;
-  position: absolute;
-  top: 288px;
-  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
 }
 
 .bargraph {
@@ -303,9 +287,6 @@ span {
 }
 
 .applicants {
-  position: relative;
-  top: 7px;
-  left: 42px;
   height: 32px;
   width: 185px;
   border: 2px solid #a9b0ba;
@@ -322,20 +303,15 @@ span {
 }
 
 .hr1 {
-  position: relative;
-  top: 89px;
   width: 95%;
-  border: none;
-  height: 3px;
   background-color: rgba(23, 36, 58, 0.06);
 }
 
 .up-arrow-button {
   position: absolute;
-  top: 526px;
+  top: 585px;
   left: 0;
   right: -208px;
-  align-items: center;
   margin: auto;
   height: 40px;
   width: 40px;
@@ -364,7 +340,7 @@ span {
 
 table {
   width: 91%;
-  margin: -11px 0 0 22px;
+  margin: -22px 0 0 10px;
   border-collapse: collapse;
 }
 
@@ -384,7 +360,7 @@ tr {
   color: #6F7E95;
   font-size: .8em;
   font-weight: 600;
-  padding-left: 30px;
+  padding: 10px 30px;
 }
 
 .right {
@@ -392,6 +368,7 @@ tr {
   color: #6F7E95;
   font-size: .75em;
   line-height: 1.25em;
+  padding: 10px;
   text-align: left;
 }
 
@@ -411,7 +388,7 @@ tr {
   display: flex;
   align-items: center;
   top: 53px;
-  left: 21px;
+  left: 9px;
   width: 91%;
   height: 60px;
   background-color: #6F7E95;
@@ -556,7 +533,7 @@ span.edit {
   }
 
   .up-arrow-button {
-    right: -44px;
+    right: 0px;
   }
 
 }
@@ -565,31 +542,16 @@ span.edit {
 
   .charts-container {
     height: 40%;
-  }
-
-  .div-for-positioning {
-    position: absolute;
-    top: 204px;
-    right: 128px;
-  }
-
-  .totals {
-    position: absolute;
-    top: 201px;
-    left: 162px;
-  }
-
-  .bar-graphs {
-    top: 521px;
-    right: 262px;
-  }
-
-  .hr1 {
-    display: none;
+    flex-direction: column;
+    align-items: center;
   }
 
   .up-arrow-button {
-    display: none;
+    top: 806px;
+  }
+
+  .header {
+    left: 10px;
   }
 
 }
@@ -609,14 +571,13 @@ span.edit {
   }
 
   .header {
-    top: 64px;
-    left: 22px;
+    left: 10px;
     width: 94%;
   }
 
   .social-media {
     width: 94%;
-    margin: 53px 20px 0 22px;
+    margin: 53px 20px 0 11px;
   }
 
   .link-to-post input {
@@ -630,14 +591,6 @@ span.edit {
 }
 
 @media screen and (max-width: 660px) {
-
-  .div-for-positioning {
-    right: 128px;
-  }
-
-  .bar-graphs {
-    right: 152px;
-  }
 
   .open-button {
     top: 169px;
@@ -679,22 +632,17 @@ span.edit {
   }
 
   .charts-container {
-    height: 48%;
+    height: 53%;
   }
 
-  .div-for-positioning {
-    right: 438px;
+  .charts-and-info {
+    height: 200%;
   }
 
   .three-radial-charts {
     display: block;
     left: 208px;
-    width: 100px;
-  }
-
-  .totals {
-    top: 441px;
-    left: 176px;
+    width: 129px;
   }
 
   .bar-graphs {
@@ -702,18 +650,20 @@ span.edit {
     top: 751px;
   }
 
+  .up-arrow-button {
+    top: 999px;
+  }
+
+  table {
+    margin: -22px 0 0 11px;
+  }
 
 }
 
+@media screen and (max-width: 350px) {
 
-@media screen and (max-width: 430px) {
-
-  .div-for-positioning {
-    right: 315px;
-  }
-
-  .bar-graphs {
-    right: 18px;
+  h1 {
+    padding: 19px 0 10px 31px;
   }
 
 }
