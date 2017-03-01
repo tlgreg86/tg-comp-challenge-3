@@ -346,7 +346,7 @@ table {
 
 div.job-description {
   width: 152%;
-  margin-right: 20px;
+  margin: 0 20px 0 13px;
 }
 
 tr {
@@ -656,6 +656,10 @@ span.edit {
 
   table {
     margin: -22px 0 0 11px;
+  }
+
+  div.job-description {
+    margin: 0px 20px 0 4px;
   }
 
 }
